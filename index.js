@@ -25,7 +25,12 @@ function cc(card) {
   return count;
   // Only change code above this line
 }
-cc(2); cc(3); cc(4); cc(5); cc(6);
+rez1 = cc(2);
+console.log(rez1);
+cc(3);
+cc(4);
+cc(5);
+cc(6);
 
 // running tests
 // Cards Sequence 2, 3, 4, 5, 6 should return 5 Bet
