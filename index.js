@@ -2,18 +2,20 @@ var count = 0;
 
 function cc(card) {
   // Only change code below this line
-  switch(card) {
+  switch (card) {
     case 2:
     case 3:
     case 4:
     case 5:
     case 6:
       count++;
+      count = count + " Bet";
       break;
     case 7:
     case 8:
     case 9:
       count;
+      count = count + " Hold";
       break;
     case 10:
     case "J":
@@ -21,6 +23,8 @@ function cc(card) {
     case "K":
     case "A":
       count--;
+      count = count + " Hold";
+      break;
   }
   return count;
   // Only change code above this line
