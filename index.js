@@ -1,40 +1,33 @@
 var count = 0;
+var result;
 
 function cc(card) {
-  // Only change code below this line
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      count++;
-      count = count + " Bet";
-      break;
-    case 7:
-    case 8:
-    case 9:
-      count;
-      count = count + " Hold";
-      break;
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-    case "A":
-      count--;
-      count = count + " Hold";
-      break;
-  }
-  return count;
-  // Only change code above this line
+	// Only change code below this line
+	switch (card) {
+		case 2, 3, 4, 5, 6:
+			count++;
+			result = count + " Bet";
+			console.log("RESULT__", result);
+			break;
+		case 7, 8, 9:
+			count = 0;
+			result = count + " Hold";
+			console.log("RESULT__", result);
+			break;
+		case 10, 'J', 'Q', 'K', 'A':
+			count--;
+			result = count + " Hold";
+			console.log("RESULT__", result);
+			break;
+	}
+	return result;
+
+	// if (count > 0) {
+	// 	return count + " Bet";
+	//   } return count + " Hold";
 }
-rez1 = cc(2);
-console.log(rez1);
-cc(3);
-cc(4);
-cc(5);
-cc(6);
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 // running tests
 // Cards Sequence 2, 3, 4, 5, 6 should return 5 Bet
