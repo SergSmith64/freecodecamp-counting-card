@@ -20,12 +20,23 @@ function cc(card) {
 	}
 
 	if (count > 0) {
+		console.log("ВЫВОД__" + count + " Bet");
 		return count + " Bet";
+	} else {
+		console.log("ВЫВОД__" + count + " Hold");
+		return count + " Hold";
 	}
-	return count + " Hold";
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+// cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+// cc(2); cc(3); cc(4); cc(5); cc(6);
+
+// cc(7); cc(8); cc(9);
+
+cc(3); cc(7); cc("Q"); cc(8); cc("A");
+
+console.log("The End");
 
 // running tests
 // Cards Sequence 2, 3, 4, 5, 6 should return 5 Bet
