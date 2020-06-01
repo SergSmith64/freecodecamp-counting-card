@@ -47,7 +47,7 @@ updateRecords(5439, "artist", "ABBA");
 
 console.log("__ ПОСЛЕ 1-го АПДЕЙТА __", collection);
 
-updateRecords(5439, "tracks", "Vaterloo", "Happy Year");
+updateRecords(5439, "tracks", ["Vaterloo", "Happy New Year", "Mamma Mia"]);
 
 console.log("__ ПОСЛЕ 2-го АПДЕЙТА __", collection);
 
