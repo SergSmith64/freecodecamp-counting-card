@@ -47,14 +47,21 @@ var contacts = [
 
 function lookUpProfile(name, prop) {
   for (var i = 0; i < contacts.length; i++) {
+
     console.log("+", contacts[i].firstName);
     console.log("_name_", name);
     console.log("+");
+
     if (contacts[i].firstName === name) {
+
       console.log("++++");
+
       if (contacts[i].hasOwnProperty(prop)) {
+
         console.log("__prop_____ ", contacts[i][prop]);
+
         return contacts[i][prop];
+
       } else {
         console.log("__свойств нет__");
         return "No such property";
