@@ -18,18 +18,15 @@ console.log("Hello");
 // [ 1, 2, 3, 4, 5 ]
 // console.log(countup(5));
 
-// __ПЕРВОЕ РЕШЕНИЕ_
-const myArr = [];
-function countup(n) {
+// __ПЕРВОЕ РЕШЕНИЕ_--- САМОЕ ПРАВИЛЬНОЕ !!! ???
+
+function countdown(n) {
   if (n < 1) {
     return [];
   } else {
-    // const arr = countup(n - 1);
-    myArr = countup(n - 1);
-    console.log("_MyArr_", myArr);
-    myArr.unshift(n);
-    console.log("_MyArr_", myArr);
-    return myArr;
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
   }
 }
 
@@ -55,7 +52,7 @@ function countup(n) {
 //   return n < 1 ? [] : [n, ...countup(n - 1)];
 // }
 
-console.log(countup(-1));
+console.log(countup(3));
 
 // Сначала это кажется нелогичным, поскольку значение n уменьшается, но значения 
 // в конечном массиве увеличиваются. Это происходит потому, что нажатие происходит 
