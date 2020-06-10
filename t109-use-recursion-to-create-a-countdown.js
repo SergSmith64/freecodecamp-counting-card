@@ -20,15 +20,19 @@ console.log("Hello");
 
 // __ПЕРВОЕ РЕШЕНИЕ_--- САМОЕ ПРАВИЛЬНОЕ !!! ???
 
-function countdown(n) {
-  if (n < 1) {
-    return [];
-  } else {
-    const arr = countdown(n - 1);
-    arr.unshift(n);
-    return arr;
-  }
-}
+// function countdown(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const arr = countdown(n - 1);
+//     arr.unshift(n);
+//     return arr;
+//   }
+// }
+
+
+
+
 
 // __ВТОРОЕ РЕШЕНИЕ_
 
@@ -52,7 +56,9 @@ function countdown(n) {
 //   return n < 1 ? [] : [n, ...countup(n - 1)];
 // }
 
-console.log(countup(3));
+// console.log(countdown(4));
+
+
 
 // Сначала это кажется нелогичным, поскольку значение n уменьшается, но значения 
 // в конечном массиве увеличиваются. Это происходит потому, что нажатие происходит 
@@ -67,6 +73,28 @@ console.log(countup(3));
 
 // ЗАДАНИЕ:
 // Написать вызов этой функции с помощью n = 5 должен вернуть массив [5, 4, 3, 2, 1].
+
+
+// НОВОЕ ЗАДАНИЕ
+
+// Мы определили функцию rangeOfNumbersс двумя параметрами. 
+// Функция должна возвращать массив целых чисел, который начинается с числа, 
+// представленного startNum параметром, и заканчивается числом, 
+// представленным endNum параметром. 
+// Начальный номер всегда будет меньше или равен конечному номеру.
+
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum) {
+    return [];
+  } else {
+    const arr = rangeOfNumbers(startNum + 1, endNum);
+    arr.unshift(startNum);
+    return arr;
+  }
+}
+console.log(rangeOfNumbers(1, 5));
+
 
 
 console.log("End");
